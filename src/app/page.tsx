@@ -1,9 +1,23 @@
-import App from "next/app";
-import Image from "next/image";
-import { AppSidebar } from "./_components/AppSideBar";
+import prisma from "@/lib/prisma";
 
-export default function Home() {
+const Home = async () => {
+  const posts = await prisma.post.findMany({
+    include: {
+      author: true,
+    },
+  });
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans text-black w-screen"></div>
+    <div>
+      {posts.map((post: (typeof posts)[0]) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.content}</p>
+          <p>Author: {post.author.name}</p>
+        </div>
+      ))}
+    </div>
   );
-}
+};
+
+export default Home;

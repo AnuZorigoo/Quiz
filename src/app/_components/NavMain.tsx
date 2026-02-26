@@ -17,7 +17,7 @@ export function NavMain() {
     <SidebarGroup>
       <SidebarMenu>
         <div className="flex justify-end">
-          <p>History</p>
+          <p className="font-semibold text-[20px]">History</p>
           <div className="w-full flex justify-end ml-20">
             <SidebarTrigger />
           </div>
