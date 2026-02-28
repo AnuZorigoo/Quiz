@@ -49,8 +49,8 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 
 export const ModelName = {
-  Post: 'Post',
-  UserTest: 'UserTest'
+  Quiz: 'Quiz',
+  Question: 'Question'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -69,24 +69,27 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const PostScalarFieldEnum = {
+export const QuizScalarFieldEnum = {
   id: 'id',
+  userId: 'userId',
   title: 'title',
   content: 'content',
-  published: 'published',
-  authorId: 'authorId'
+  summary: 'summary',
+  createdAt: 'createdAt'
 } as const
 
-export type PostScalarFieldEnum = (typeof PostScalarFieldEnum)[keyof typeof PostScalarFieldEnum]
+export type QuizScalarFieldEnum = (typeof QuizScalarFieldEnum)[keyof typeof QuizScalarFieldEnum]
 
 
-export const UserTestScalarFieldEnum = {
+export const QuestionScalarFieldEnum = {
   id: 'id',
-  name: 'name',
-  email: 'email'
+  quizId: 'quizId',
+  question: 'question',
+  answers: 'answers',
+  correct: 'correct'
 } as const
 
-export type UserTestScalarFieldEnum = (typeof UserTestScalarFieldEnum)[keyof typeof UserTestScalarFieldEnum]
+export type QuestionScalarFieldEnum = (typeof QuestionScalarFieldEnum)[keyof typeof QuestionScalarFieldEnum]
 
 
 export const SortOrder = {

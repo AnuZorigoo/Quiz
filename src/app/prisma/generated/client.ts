@@ -29,8 +29,8 @@ export * from "./enums"
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Posts
- * const posts = await prisma.post.findMany()
+ * // Fetch zero or more Quizzes
+ * const quizzes = await prisma.quiz.findMany()
  * ```
  * 
  * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client).
@@ -45,12 +45,12 @@ path.join(__dirname, "libquery_engine-darwin-arm64.dylib.node")
 path.join(process.cwd(), "src/app/prisma/generated/libquery_engine-darwin-arm64.dylib.node")
 
 /**
- * Model Post
+ * Model Quiz
  * 
  */
-export type Post = Prisma.PostModel
+export type Quiz = Prisma.QuizModel
 /**
- * Model UserTest
+ * Model Question
  * 
  */
-export type UserTest = Prisma.UserTestModel
+export type Question = Prisma.QuestionModel

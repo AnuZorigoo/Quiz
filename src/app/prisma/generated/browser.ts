@@ -18,12 +18,12 @@ export { Prisma }
 export * as $Enums from './enums'
 export * from './enums';
 /**
- * Model Post
+ * Model Quiz
  * 
  */
-export type Post = Prisma.PostModel
+export type Quiz = Prisma.QuizModel
 /**
- * Model UserTest
+ * Model Question
  * 
  */
-export type UserTest = Prisma.UserTestModel
+export type Question = Prisma.QuestionModel
