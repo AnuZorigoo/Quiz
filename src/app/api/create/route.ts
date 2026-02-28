@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     data: questions.map((q) => ({
       quizId: quiz.id,
       question: q.question,
-      answers: JSON.stringify(q.options),
+      answers: q.options,
       correct: q.options[q.correctIndex],
     })),
   });
